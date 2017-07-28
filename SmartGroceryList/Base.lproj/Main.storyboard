@@ -23,6 +23,57 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4qG-Ow-dWv">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroceryItemCell" id="eqe-wo-xIW" customClass="GroceryItemTableViewCell" customModule="SmartGroceryList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eqe-wo-xIW" id="Wsd-vv-x2L">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lj-UJ-v9f" userLabel="name">
+                                                    <rect key="frame" x="15" y="5" width="48.5" height="33.5"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="name">
+                                                            <attributes>
+                                                                <font key="NSFont" size="20" name="HelveticaNeue-Light"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AM9-pc-F9T" userLabel="quantity">
+                                                    <rect key="frame" x="73.5" y="10.5" width="286.5" height="24"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="quantity">
+                                                            <attributes>
+                                                                <font key="NSFont" size="20" name="HelveticaNeue-Thin"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="1lj-UJ-v9f" secondAttribute="bottom" constant="5" id="1rb-7S-IEB"/>
+                                                <constraint firstItem="1lj-UJ-v9f" firstAttribute="top" secondItem="Wsd-vv-x2L" secondAttribute="top" constant="5" id="60v-E9-SzA"/>
+                                                <constraint firstItem="1lj-UJ-v9f" firstAttribute="leading" secondItem="Wsd-vv-x2L" secondAttribute="leading" constant="15" id="O4E-RG-Ps4"/>
+                                                <constraint firstItem="AM9-pc-F9T" firstAttribute="leading" secondItem="1lj-UJ-v9f" secondAttribute="trailing" constant="10" id="eMA-6I-ACH"/>
+                                                <constraint firstItem="AM9-pc-F9T" firstAttribute="centerY" secondItem="1lj-UJ-v9f" secondAttribute="centerY" id="gJQ-gY-ZgS"/>
+                                                <constraint firstAttribute="trailing" secondItem="AM9-pc-F9T" secondAttribute="trailing" constant="15" id="hxC-b6-MZW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="1lj-UJ-v9f" id="Ps0-rx-O3o"/>
+                                            <outlet property="quantityLabel" destination="AM9-pc-F9T" id="VY2-RW-w7A"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="VUZ-t4-YnZ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

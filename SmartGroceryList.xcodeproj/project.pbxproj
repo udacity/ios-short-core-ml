@@ -13,6 +13,8 @@
 		022132311F2BCA040077DE41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0221322F1F2BCA040077DE41 /* Main.storyboard */; };
 		022132331F2BCA040077DE41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022132321F2BCA040077DE41 /* Assets.xcassets */; };
 		022132361F2BCA040077DE41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022132341F2BCA040077DE41 /* LaunchScreen.storyboard */; };
+		0221323E1F2BD5930077DE41 /* GroceryItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0221323D1F2BD5930077DE41 /* GroceryItemTableViewCell.swift */; };
+		022132401F2BDFFE0077DE41 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0221323F1F2BDFFE0077DE41 /* GroceryItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		022132321F2BCA040077DE41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		022132351F2BCA040077DE41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		022132371F2BCA040077DE41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0221323D1F2BD5930077DE41 /* GroceryItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemTableViewCell.swift; sourceTree = "<group>"; };
+		0221323F1F2BDFFE0077DE41 /* GroceryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				022132321F2BCA040077DE41 /* Assets.xcassets */,
 				022132341F2BCA040077DE41 /* LaunchScreen.storyboard */,
 				022132371F2BCA040077DE41 /* Info.plist */,
+				0221323D1F2BD5930077DE41 /* GroceryItemTableViewCell.swift */,
+				0221323F1F2BDFFE0077DE41 /* GroceryItem.swift */,
 			);
 			path = SmartGroceryList;
 			sourceTree = "<group>";
@@ -140,6 +146,8 @@
 			files = (
 				0221322E1F2BCA040077DE41 /* RecognizerViewController.swift in Sources */,
 				0221322A1F2BCA040077DE41 /* AppDelegate.swift in Sources */,
+				0221323E1F2BD5930077DE41 /* GroceryItemTableViewCell.swift in Sources */,
+				022132401F2BDFFE0077DE41 /* GroceryItem.swift in Sources */,
 				0221322C1F2BCA040077DE41 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
