@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -104,13 +105,97 @@
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hHe-aj-PS5">
+                                <rect key="frame" x="0.0" y="20" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hHe-aj-PS5" secondAttribute="height" multiplier="224:224" id="rQ6-Bc-Fvi"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59c-hh-KjX" userLabel="Prediction Label">
+                                <rect key="frame" x="15" y="415" width="100" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Odt-Sj-sr3"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Prediction">
+                                        <attributes>
+                                            <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAx-6Y-wcQ" userLabel="Result Label">
+                                <rect key="frame" x="135" y="415" width="225" height="26"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <font key="NSFont" size="22" name="HelveticaNeue-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFq-0u-wxI" userLabel="Button container view">
+                                <rect key="frame" x="133.5" y="461" width="108" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Md3-iJ-Qb5" userLabel="left button">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="SJw-mJ-CiN"/>
+                                            <constraint firstAttribute="height" constant="44" id="YeT-oB-wPD"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="select-photo-icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSW-pJ-Yuh" userLabel="right button">
+                                        <rect key="frame" x="64" y="0.0" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Z0G-DE-SaP"/>
+                                            <constraint firstAttribute="width" constant="44" id="j1n-Bd-wTw"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="use-camera-icon"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="69i-p0-9Np"/>
+                                    <constraint firstItem="Md3-iJ-Qb5" firstAttribute="top" secondItem="JFq-0u-wxI" secondAttribute="top" id="HAl-aK-Xke"/>
+                                    <constraint firstAttribute="trailing" secondItem="WSW-pJ-Yuh" secondAttribute="trailing" id="KOk-R2-gdt"/>
+                                    <constraint firstItem="Md3-iJ-Qb5" firstAttribute="leading" secondItem="JFq-0u-wxI" secondAttribute="leading" id="WdH-Cr-XYF"/>
+                                    <constraint firstAttribute="height" constant="44" id="ghj-Cl-9of"/>
+                                    <constraint firstItem="WSW-pJ-Yuh" firstAttribute="top" secondItem="JFq-0u-wxI" secondAttribute="top" id="lGO-HI-Sr8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iAx-6Y-wcQ" secondAttribute="trailing" constant="15" id="2hQ-FG-8No"/>
+                            <constraint firstItem="iAx-6Y-wcQ" firstAttribute="height" secondItem="59c-hh-KjX" secondAttribute="height" id="98G-oJ-irT"/>
+                            <constraint firstItem="hHe-aj-PS5" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="Ddl-hh-GNw"/>
+                            <constraint firstItem="iAx-6Y-wcQ" firstAttribute="centerY" secondItem="59c-hh-KjX" secondAttribute="centerY" id="Dzb-k7-TRg"/>
+                            <constraint firstAttribute="trailing" secondItem="hHe-aj-PS5" secondAttribute="trailing" id="Pa0-iv-2UA"/>
+                            <constraint firstItem="hHe-aj-PS5" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="SJ0-LX-CPx"/>
+                            <constraint firstItem="JFq-0u-wxI" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Xmh-sX-6ix"/>
+                            <constraint firstItem="59c-hh-KjX" firstAttribute="top" secondItem="hHe-aj-PS5" secondAttribute="bottom" constant="20" id="m75-Ww-Qrr"/>
+                            <constraint firstItem="JFq-0u-wxI" firstAttribute="top" secondItem="59c-hh-KjX" secondAttribute="bottom" constant="20" id="qZR-l1-iv5"/>
+                            <constraint firstItem="iAx-6Y-wcQ" firstAttribute="leading" secondItem="59c-hh-KjX" secondAttribute="trailing" constant="20" id="qmN-wx-qd7"/>
+                            <constraint firstItem="59c-hh-KjX" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="15" id="unp-qK-Qtu"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="camera-icon" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="imageView" destination="hHe-aj-PS5" id="qvE-0u-98n"/>
+                        <outlet property="leftButton" destination="Md3-iJ-Qb5" id="GlZ-DN-r3d"/>
+                        <outlet property="predictionResultLabel" destination="iAx-6Y-wcQ" id="vJ7-Zq-JLl"/>
+                        <outlet property="rightButton" destination="WSW-pJ-Yuh" id="Lmd-la-cey"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -135,5 +220,7 @@
     <resources>
         <image name="camera-icon" width="25" height="20"/>
         <image name="list-icon" width="25" height="25"/>
+        <image name="select-photo-icon" width="44" height="44"/>
+        <image name="use-camera-icon" width="42" height="34"/>
     </resources>
 </document>

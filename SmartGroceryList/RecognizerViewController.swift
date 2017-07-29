@@ -10,10 +10,14 @@ import UIKit
 
 class RecognizerViewController: UIViewController {
 
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var predictionResultLabel: UILabel!
+    @IBOutlet var leftButton: UIButton!
+    @IBOutlet var rightButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        imagePickerController.delegate = self
     }
-
 }
 
