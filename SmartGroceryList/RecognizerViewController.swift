@@ -11,11 +11,8 @@ import UIKit
 class RecognizerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource {
 
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var leftButton: UIButton!
-    @IBOutlet var rightButton: UIButton!
-    @IBOutlet var predictionLabel: UILabel!
-    @IBOutlet var predictionResultLabel: UILabel!
-    @IBOutlet var addToListButton: UIButton!
+    @IBOutlet var cameraButton: UIButton!
+    @IBOutlet var predictionView: PredictionView!
     @IBOutlet var tableView: UITableView!
 
     var groceryItems: [GroceryItem] = []
@@ -36,9 +33,6 @@ class RecognizerViewController: UIViewController, UIImagePickerControllerDelegat
 
     func setupUI(image: UIImage?) {
         imageView.image = image
-        predictionLabel.isHidden = image == nil
-        predictionResultLabel.isHidden = image == nil
-        addToListButton.isHidden = image == nil
     }
 
     @IBAction func takePhoto() {
@@ -47,14 +41,6 @@ class RecognizerViewController: UIViewController, UIImagePickerControllerDelegat
 
         present(imagePickerController, animated: true, completion: nil)
     }
-
-    @IBAction func selectPhoto() {
-        imagePickerController.allowsEditing = false
-        imagePickerController.sourceType = .photoLibrary
-
-        present(imagePickerController, animated: true, completion: nil)
-    }
-
     // MARK: UIImagePickerControllerDelegate
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

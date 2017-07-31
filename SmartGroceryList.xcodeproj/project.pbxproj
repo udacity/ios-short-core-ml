@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0221322A1F2BCA040077DE41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022132291F2BCA040077DE41 /* AppDelegate.swift */; };
-		0221322C1F2BCA040077DE41 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0221322B1F2BCA040077DE41 /* ListViewController.swift */; };
 		0221322E1F2BCA040077DE41 /* RecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0221322D1F2BCA040077DE41 /* RecognizerViewController.swift */; };
 		022132311F2BCA040077DE41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0221322F1F2BCA040077DE41 /* Main.storyboard */; };
 		022132331F2BCA040077DE41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022132321F2BCA040077DE41 /* Assets.xcassets */; };
@@ -22,7 +21,6 @@
 /* Begin PBXFileReference section */
 		022132261F2BCA040077DE41 /* SmartGroceryList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartGroceryList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		022132291F2BCA040077DE41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0221322B1F2BCA040077DE41 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		0221322D1F2BCA040077DE41 /* RecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizerViewController.swift; sourceTree = "<group>"; };
 		022132301F2BCA040077DE41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		022132321F2BCA040077DE41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,7 +64,6 @@
 			children = (
 				026D1B8F1F2EB3A7008588FB /* Resnet50.mlmodel */,
 				022132291F2BCA040077DE41 /* AppDelegate.swift */,
-				0221322B1F2BCA040077DE41 /* ListViewController.swift */,
 				0221322D1F2BCA040077DE41 /* RecognizerViewController.swift */,
 				0221322F1F2BCA040077DE41 /* Main.storyboard */,
 				022132321F2BCA040077DE41 /* Assets.xcassets */,
@@ -155,7 +152,6 @@
 				0221323E1F2BD5930077DE41 /* GroceryItemTableViewCell.swift in Sources */,
 				022132401F2BDFFE0077DE41 /* GroceryItem.swift in Sources */,
 				026D1B901F2EB3A7008588FB /* Resnet50.mlmodel in Sources */,
-				0221322C1F2BCA040077DE41 /* ListViewController.swift in Sources */,
 				026D1B981F2F36E8008588FB /* PredictionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
