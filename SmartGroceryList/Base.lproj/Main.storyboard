@@ -107,77 +107,76 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hHe-aj-PS5">
-                                <rect key="frame" x="87" y="20" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="20" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Mhh-Mm-tXT"/>
                                     <constraint firstAttribute="height" constant="200" id="NgT-Qk-zLt"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59c-hh-KjX" userLabel="Prediction Label">
-                                <rect key="frame" x="15" y="279" width="100" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Got-6P-uzF" userLabel="camera button">
+                                <rect key="frame" x="162.5" y="95" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Odt-Sj-sr3"/>
+                                    <constraint firstAttribute="width" constant="50" id="Azx-PZ-hxv"/>
+                                    <constraint firstAttribute="height" constant="50" id="XsD-5k-tMP"/>
                                 </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Prediction">
-                                        <attributes>
-                                            <font key="NSFont" size="18" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAx-6Y-wcQ" userLabel="Result Label">
-                                <rect key="frame" x="135" y="279" width="195" height="21"/>
-                                <attributedString key="attributedText"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFq-0u-wxI" userLabel="Button container view">
-                                <rect key="frame" x="133.5" y="225" width="108" height="44"/>
+                                <state key="normal" title="Button" image="camera-icon-grey"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbW-uf-GyQ" userLabel="prediction view">
+                                <rect key="frame" x="10" y="220" width="355" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Md3-iJ-Qb5" userLabel="left button">
-                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59c-hh-KjX" userLabel="Prediction Label">
+                                        <rect key="frame" x="0.0" y="11" width="100" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="44" id="SJw-mJ-CiN"/>
-                                            <constraint firstAttribute="height" constant="44" id="YeT-oB-wPD"/>
+                                            <constraint firstAttribute="width" constant="100" id="Odt-Sj-sr3"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="select-photo-icon"/>
-                                        <connections>
-                                            <action selector="selectPhoto" destination="8rJ-Kc-sve" eventType="touchUpInside" id="sOS-j7-bZm"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSW-pJ-Yuh" userLabel="right button">
-                                        <rect key="frame" x="64" y="0.0" width="44" height="44"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Prediction">
+                                                <attributes>
+                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAx-6Y-wcQ" userLabel="Result Label">
+                                        <rect key="frame" x="110" y="21.5" width="210" height="0.0"/>
+                                        <attributedString key="attributedText"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdM-fb-xne" userLabel="add to list button">
+                                        <rect key="frame" x="325" y="7" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="Z0G-DE-SaP"/>
-                                            <constraint firstAttribute="width" constant="44" id="j1n-Bd-wTw"/>
+                                            <constraint firstAttribute="width" secondItem="kdM-fb-xne" secondAttribute="height" multiplier="1:1" id="7es-eb-GJB"/>
+                                            <constraint firstAttribute="width" constant="30" id="Vh2-vi-hB2"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="use-camera-icon"/>
-                                        <connections>
-                                            <action selector="takePhoto" destination="8rJ-Kc-sve" eventType="touchUpInside" id="6gA-LM-gkH"/>
-                                        </connections>
+                                        <state key="normal" image="add-to-list">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="108" id="69i-p0-9Np"/>
-                                    <constraint firstItem="Md3-iJ-Qb5" firstAttribute="top" secondItem="JFq-0u-wxI" secondAttribute="top" id="HAl-aK-Xke"/>
-                                    <constraint firstAttribute="trailing" secondItem="WSW-pJ-Yuh" secondAttribute="trailing" id="KOk-R2-gdt"/>
-                                    <constraint firstItem="Md3-iJ-Qb5" firstAttribute="leading" secondItem="JFq-0u-wxI" secondAttribute="leading" id="WdH-Cr-XYF"/>
-                                    <constraint firstAttribute="height" constant="44" id="ghj-Cl-9of"/>
-                                    <constraint firstItem="WSW-pJ-Yuh" firstAttribute="top" secondItem="JFq-0u-wxI" secondAttribute="top" id="lGO-HI-Sr8"/>
+                                    <constraint firstItem="iAx-6Y-wcQ" firstAttribute="leading" secondItem="59c-hh-KjX" secondAttribute="trailing" constant="10" id="0kU-oG-dAD"/>
+                                    <constraint firstAttribute="trailing" secondItem="kdM-fb-xne" secondAttribute="trailing" id="CQe-s1-s5J"/>
+                                    <constraint firstItem="kdM-fb-xne" firstAttribute="leading" secondItem="iAx-6Y-wcQ" secondAttribute="trailing" constant="5" id="E0n-AI-nSQ"/>
+                                    <constraint firstAttribute="height" constant="44" id="H78-a4-IkC"/>
+                                    <constraint firstItem="iAx-6Y-wcQ" firstAttribute="centerY" secondItem="59c-hh-KjX" secondAttribute="centerY" id="j92-Xo-7E0"/>
+                                    <constraint firstItem="59c-hh-KjX" firstAttribute="centerY" secondItem="zbW-uf-GyQ" secondAttribute="centerY" id="lmT-Tn-YQC"/>
+                                    <constraint firstItem="kdM-fb-xne" firstAttribute="centerY" secondItem="zbW-uf-GyQ" secondAttribute="centerY" id="wE6-Xg-FVS"/>
+                                    <constraint firstItem="59c-hh-KjX" firstAttribute="leading" secondItem="zbW-uf-GyQ" secondAttribute="leading" id="z71-Gi-5mm"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xY8-lj-qzH">
-                                <rect key="frame" x="0.0" y="309" width="375" height="309"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xY8-lj-qzH">
+                                <rect key="frame" x="0.0" y="264" width="375" height="354"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroceryItemCell" id="Au6-WT-hcm" customClass="GroceryItemTableViewCell" customModule="SmartGroceryList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Au6-WT-hcm" id="BD3-5k-FPD">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sA7-lM-f8l" userLabel="name">
@@ -224,46 +223,28 @@
                                     <outlet property="dataSource" destination="8rJ-Kc-sve" id="gM2-9f-Z2G"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdM-fb-xne" userLabel="add to list button">
-                                <rect key="frame" x="335" y="274" width="30" height="30"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="kdM-fb-xne" secondAttribute="height" multiplier="1:1" id="7es-eb-GJB"/>
-                                    <constraint firstAttribute="width" constant="30" id="Vh2-vi-hB2"/>
-                                </constraints>
-                                <state key="normal" image="add-to-list">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xY8-lj-qzH" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="2PO-9c-cqu"/>
-                            <constraint firstAttribute="trailing" secondItem="kdM-fb-xne" secondAttribute="trailing" constant="10" id="7Ye-Q7-1On"/>
-                            <constraint firstItem="hHe-aj-PS5" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="7id-yU-tnx"/>
-                            <constraint firstItem="iAx-6Y-wcQ" firstAttribute="height" secondItem="59c-hh-KjX" secondAttribute="height" id="98G-oJ-irT"/>
                             <constraint firstItem="hHe-aj-PS5" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="B6f-I0-mC0"/>
-                            <constraint firstItem="59c-hh-KjX" firstAttribute="top" secondItem="JFq-0u-wxI" secondAttribute="bottom" constant="10" id="Bhb-Fh-8Gu"/>
-                            <constraint firstItem="iAx-6Y-wcQ" firstAttribute="centerY" secondItem="59c-hh-KjX" secondAttribute="centerY" id="Dzb-k7-TRg"/>
-                            <constraint firstItem="kdM-fb-xne" firstAttribute="centerY" secondItem="59c-hh-KjX" secondAttribute="centerY" id="XK2-yl-M0n"/>
-                            <constraint firstItem="JFq-0u-wxI" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Xmh-sX-6ix"/>
+                            <constraint firstItem="Got-6P-uzF" firstAttribute="centerX" secondItem="hHe-aj-PS5" secondAttribute="centerX" id="H2S-HK-dfL"/>
+                            <constraint firstItem="xY8-lj-qzH" firstAttribute="top" secondItem="zbW-uf-GyQ" secondAttribute="bottom" id="Wft-r9-0Jd"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="xY8-lj-qzH" secondAttribute="bottom" id="YF2-LF-kiK"/>
-                            <constraint firstItem="kdM-fb-xne" firstAttribute="leading" secondItem="iAx-6Y-wcQ" secondAttribute="trailing" constant="5" id="e3h-gn-Wnt"/>
+                            <constraint firstItem="Got-6P-uzF" firstAttribute="centerY" secondItem="hHe-aj-PS5" secondAttribute="centerY" id="cZ0-ji-Daw"/>
+                            <constraint firstItem="hHe-aj-PS5" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="eFi-GU-y9e"/>
+                            <constraint firstAttribute="trailing" secondItem="zbW-uf-GyQ" secondAttribute="trailing" constant="10" id="enG-re-syv"/>
                             <constraint firstAttribute="trailing" secondItem="xY8-lj-qzH" secondAttribute="trailing" id="fsh-wl-HfP"/>
-                            <constraint firstItem="xY8-lj-qzH" firstAttribute="top" secondItem="kdM-fb-xne" secondAttribute="bottom" constant="5" id="j16-Eh-KLv"/>
-                            <constraint firstItem="JFq-0u-wxI" firstAttribute="top" secondItem="hHe-aj-PS5" secondAttribute="bottom" constant="5" id="oOk-I2-ydr"/>
-                            <constraint firstItem="iAx-6Y-wcQ" firstAttribute="leading" secondItem="59c-hh-KjX" secondAttribute="trailing" constant="20" id="qmN-wx-qd7"/>
-                            <constraint firstItem="59c-hh-KjX" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="15" id="unp-qK-Qtu"/>
+                            <constraint firstItem="zbW-uf-GyQ" firstAttribute="top" secondItem="hHe-aj-PS5" secondAttribute="bottom" id="t0X-cd-tg0"/>
+                            <constraint firstItem="zbW-uf-GyQ" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="10" id="zx3-G4-5KV"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="camera-icon" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="addToListButton" destination="kdM-fb-xne" id="tHN-DE-qS2"/>
                         <outlet property="imageView" destination="hHe-aj-PS5" id="qvE-0u-98n"/>
-                        <outlet property="leftButton" destination="Md3-iJ-Qb5" id="oCz-JK-6JJ"/>
                         <outlet property="predictionLabel" destination="59c-hh-KjX" id="KGc-Er-OQ9"/>
                         <outlet property="predictionResultLabel" destination="iAx-6Y-wcQ" id="sso-pM-7vP"/>
-                        <outlet property="rightButton" destination="WSW-pJ-Yuh" id="T7K-qh-8rP"/>
                         <outlet property="tableView" destination="xY8-lj-qzH" id="Qdn-4M-r37"/>
                     </connections>
                 </viewController>
@@ -294,8 +275,7 @@
     <resources>
         <image name="add-to-list" width="44" height="44"/>
         <image name="camera-icon" width="25" height="20"/>
+        <image name="camera-icon-grey" width="50" height="42"/>
         <image name="list-icon" width="25" height="25"/>
-        <image name="select-photo-icon" width="44" height="44"/>
-        <image name="use-camera-icon" width="42" height="34"/>
     </resources>
 </document>
