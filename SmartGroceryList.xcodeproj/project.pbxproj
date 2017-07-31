@@ -62,18 +62,34 @@
 		022132281F2BCA040077DE41 /* SmartGroceryList */ = {
 			isa = PBXGroup;
 			children = (
-				026D1B8F1F2EB3A7008588FB /* Resnet50.mlmodel */,
 				022132291F2BCA040077DE41 /* AppDelegate.swift */,
 				0221322D1F2BCA040077DE41 /* RecognizerViewController.swift */,
+				026D1B8F1F2EB3A7008588FB /* Resnet50.mlmodel */,
 				0221322F1F2BCA040077DE41 /* Main.storyboard */,
-				022132321F2BCA040077DE41 /* Assets.xcassets */,
 				022132341F2BCA040077DE41 /* LaunchScreen.storyboard */,
 				022132371F2BCA040077DE41 /* Info.plist */,
-				0221323D1F2BD5930077DE41 /* GroceryItemTableViewCell.swift */,
-				026D1B971F2F36E8008588FB /* PredictionView.swift */,
-				026D1B9B1F2F3F38008588FB /* ImageToPixelBufferConverter.swift */,
+				026D1BBE1F2FB554008588FB /* View */,
+				026D1BBF1F2FB563008588FB /* Helper */,
+				022132321F2BCA040077DE41 /* Assets.xcassets */,
 			);
 			path = SmartGroceryList;
+			sourceTree = "<group>";
+		};
+		026D1BBE1F2FB554008588FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0221323D1F2BD5930077DE41 /* GroceryItemTableViewCell.swift */,
+				026D1B971F2F36E8008588FB /* PredictionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		026D1BBF1F2FB563008588FB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				026D1B9B1F2F3F38008588FB /* ImageToPixelBufferConverter.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
