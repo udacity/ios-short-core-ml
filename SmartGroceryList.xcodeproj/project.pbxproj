@@ -13,7 +13,6 @@
 		022132331F2BCA040077DE41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022132321F2BCA040077DE41 /* Assets.xcassets */; };
 		022132361F2BCA040077DE41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022132341F2BCA040077DE41 /* LaunchScreen.storyboard */; };
 		0221323E1F2BD5930077DE41 /* GroceryItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0221323D1F2BD5930077DE41 /* GroceryItemTableViewCell.swift */; };
-		022132401F2BDFFE0077DE41 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0221323F1F2BDFFE0077DE41 /* GroceryItem.swift */; };
 		026D1B901F2EB3A7008588FB /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 026D1B8F1F2EB3A7008588FB /* Resnet50.mlmodel */; };
 		026D1B981F2F36E8008588FB /* PredictionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D1B971F2F36E8008588FB /* PredictionView.swift */; };
 		026D1B9C1F2F3F38008588FB /* ImageToPixelBufferConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D1B9B1F2F3F38008588FB /* ImageToPixelBufferConverter.swift */; };
@@ -28,7 +27,6 @@
 		022132351F2BCA040077DE41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		022132371F2BCA040077DE41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0221323D1F2BD5930077DE41 /* GroceryItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemTableViewCell.swift; sourceTree = "<group>"; };
-		0221323F1F2BDFFE0077DE41 /* GroceryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
 		026D1B8F1F2EB3A7008588FB /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
 		026D1B971F2F36E8008588FB /* PredictionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionView.swift; sourceTree = "<group>"; };
 		026D1B9B1F2F3F38008588FB /* ImageToPixelBufferConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageToPixelBufferConverter.swift; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 				022132341F2BCA040077DE41 /* LaunchScreen.storyboard */,
 				022132371F2BCA040077DE41 /* Info.plist */,
 				0221323D1F2BD5930077DE41 /* GroceryItemTableViewCell.swift */,
-				0221323F1F2BDFFE0077DE41 /* GroceryItem.swift */,
 				026D1B971F2F36E8008588FB /* PredictionView.swift */,
 				026D1B9B1F2F3F38008588FB /* ImageToPixelBufferConverter.swift */,
 			);
@@ -154,7 +151,6 @@
 				026D1B9C1F2F3F38008588FB /* ImageToPixelBufferConverter.swift in Sources */,
 				0221322A1F2BCA040077DE41 /* AppDelegate.swift in Sources */,
 				0221323E1F2BD5930077DE41 /* GroceryItemTableViewCell.swift in Sources */,
-				022132401F2BDFFE0077DE41 /* GroceryItem.swift in Sources */,
 				026D1B901F2EB3A7008588FB /* Resnet50.mlmodel in Sources */,
 				026D1B981F2F36E8008588FB /* PredictionView.swift in Sources */,
 			);

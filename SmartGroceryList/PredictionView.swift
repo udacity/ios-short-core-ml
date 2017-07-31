@@ -10,8 +10,8 @@ import UIKit
 
 class PredictionView: UIView {
 
-    @IBOutlet var predictionLabel: UILabel!
     @IBOutlet var predictionResultLabel: UILabel!
     @IBOutlet var addToListButton: UIButton!
+    @IBOutlet var rejectPredictionButton: UIButton!
 
 }

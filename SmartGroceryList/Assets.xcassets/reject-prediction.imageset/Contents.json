@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "reject-prediction.png",
+      "filename" : "reject-prediction-red.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "reject-prediction@2x.png",
+      "filename" : "reject-prediction-red@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "reject-prediction@3x.png",
+      "filename" : "reject-prediction-red@3x.png",
       "scale" : "3x"
     }
   ],

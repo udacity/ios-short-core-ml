@@ -11,7 +11,6 @@ import UIKit
 class GroceryItemTableViewCell: UITableViewCell {
 
     @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var quantityLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
