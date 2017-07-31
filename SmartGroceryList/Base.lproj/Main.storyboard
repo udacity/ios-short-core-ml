@@ -29,7 +29,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Got-6P-uzF" userLabel="camera button">
-                                <rect key="frame" x="249.5" y="200" width="40" height="34"/>
+                                <rect key="frame" x="167.5" y="200" width="40" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Azx-PZ-hxv"/>
                                     <constraint firstAttribute="width" secondItem="Got-6P-uzF" secondAttribute="height" multiplier="25:21" id="vFj-ye-beS"/>
@@ -72,6 +72,9 @@
                                         <state key="normal" image="add-to-list">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addToList" destination="8rJ-Kc-sve" eventType="touchUpInside" id="fK2-ue-kR0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -154,11 +157,11 @@
                             <constraint firstItem="xY8-lj-qzH" firstAttribute="top" secondItem="zbW-uf-GyQ" secondAttribute="bottom" id="Wft-r9-0Jd"/>
                             <constraint firstItem="Got-6P-uzF" firstAttribute="bottom" secondItem="hHe-aj-PS5" secondAttribute="bottom" constant="-10" id="XF8-Gw-MAb"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="xY8-lj-qzH" secondAttribute="bottom" id="YF2-LF-kiK"/>
-                            <constraint firstItem="Got-6P-uzF" firstAttribute="trailing" secondItem="hHe-aj-PS5" secondAttribute="trailing" constant="-10" id="bpA-NQ-LCK"/>
                             <constraint firstItem="hHe-aj-PS5" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="eFi-GU-y9e"/>
                             <constraint firstAttribute="trailing" secondItem="zbW-uf-GyQ" secondAttribute="trailing" constant="10" id="enG-re-syv"/>
                             <constraint firstAttribute="trailing" secondItem="xY8-lj-qzH" secondAttribute="trailing" id="fsh-wl-HfP"/>
                             <constraint firstItem="zbW-uf-GyQ" firstAttribute="top" secondItem="hHe-aj-PS5" secondAttribute="bottom" id="t0X-cd-tg0"/>
+                            <constraint firstItem="Got-6P-uzF" firstAttribute="centerX" secondItem="hHe-aj-PS5" secondAttribute="centerX" id="xhU-7A-Rrc"/>
                             <constraint firstItem="zbW-uf-GyQ" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="10" id="zx3-G4-5KV"/>
                         </constraints>
                     </view>

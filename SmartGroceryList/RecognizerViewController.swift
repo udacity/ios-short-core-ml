@@ -20,21 +20,32 @@ class RecognizerViewController: UIViewController, UIImagePickerControllerDelegat
     let imagePickerController = UIImagePickerController()
     let resnet50Model = Resnet50()
     var groceryItems: [GroceryItem] = []
+    var currentPrediction: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePickerController.delegate = self
 
-        setupUI(image: nil)
-
+        predictionView.isHidden = true
         setupInitialGroceryListData()
 
         tableView.reloadData()
     }
 
-    func setupUI(image: UIImage?) {
+    func setupPrediction(prediction: String, image: UIImage) {
+        predictionView.predictionResultLabel.text = prediction
+        predictionView.isHidden = false
         imageView.image = image
-        predictionView.isHidden = image == nil
+
+        currentPrediction = prediction
+    }
+
+    func clearPrediction() {
+        predictionView.isHidden = true
+        predictionView.predictionResultLabel.text = nil
+        imageView.image = nil
+
+        currentPrediction = nil
     }
 
     @IBAction func takePhoto() {
@@ -42,6 +53,14 @@ class RecognizerViewController: UIViewController, UIImagePickerControllerDelegat
         imagePickerController.sourceType = .camera
 
         present(imagePickerController, animated: true, completion: nil)
+    }
+
+    @IBAction func addToList() {
+        if let predictionToAdd = currentPrediction {
+            let newItem = GroceryItem(name: predictionToAdd, quantity: "1")
+            groceryItems.append(newItem)
+            tableView.reloadData()
+        }
     }
     
     // MARK: UIImagePickerControllerDelegate
@@ -51,8 +70,7 @@ class RecognizerViewController: UIViewController, UIImagePickerControllerDelegat
             imageView.contentMode = .scaleAspectFit
 
             if let topPrediction = try? recognize(image: imageSelected) {
-                predictionView.predictionResultLabel.text = topPrediction
-                setupUI(image: imageSelected)
+                setupPrediction(prediction: topPrediction, image: imageSelected)
             }
         }
 
