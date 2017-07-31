@@ -16,6 +16,7 @@
 		022132401F2BDFFE0077DE41 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0221323F1F2BDFFE0077DE41 /* GroceryItem.swift */; };
 		026D1B901F2EB3A7008588FB /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 026D1B8F1F2EB3A7008588FB /* Resnet50.mlmodel */; };
 		026D1B981F2F36E8008588FB /* PredictionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D1B971F2F36E8008588FB /* PredictionView.swift */; };
+		026D1B9C1F2F3F38008588FB /* ImageToPixelBufferConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D1B9B1F2F3F38008588FB /* ImageToPixelBufferConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0221323F1F2BDFFE0077DE41 /* GroceryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
 		026D1B8F1F2EB3A7008588FB /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
 		026D1B971F2F36E8008588FB /* PredictionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionView.swift; sourceTree = "<group>"; };
+		026D1B9B1F2F3F38008588FB /* ImageToPixelBufferConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageToPixelBufferConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				0221323D1F2BD5930077DE41 /* GroceryItemTableViewCell.swift */,
 				0221323F1F2BDFFE0077DE41 /* GroceryItem.swift */,
 				026D1B971F2F36E8008588FB /* PredictionView.swift */,
+				026D1B9B1F2F3F38008588FB /* ImageToPixelBufferConverter.swift */,
 			);
 			path = SmartGroceryList;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0221322E1F2BCA040077DE41 /* RecognizerViewController.swift in Sources */,
+				026D1B9C1F2F3F38008588FB /* ImageToPixelBufferConverter.swift in Sources */,
 				0221322A1F2BCA040077DE41 /* AppDelegate.swift in Sources */,
 				0221323E1F2BD5930077DE41 /* GroceryItemTableViewCell.swift in Sources */,
 				022132401F2BDFFE0077DE41 /* GroceryItem.swift in Sources */,

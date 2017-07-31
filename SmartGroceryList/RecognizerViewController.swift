@@ -15,10 +15,11 @@ class RecognizerViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet var predictionView: PredictionView!
     @IBOutlet var tableView: UITableView!
 
-    var groceryItems: [GroceryItem] = []
     let CellReuseIdentifer = "GroceryItemCell"
 
     let imagePickerController = UIImagePickerController()
+    let resnet50Model = Resnet50()
+    var groceryItems: [GroceryItem] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,7 @@ class RecognizerViewController: UIViewController, UIImagePickerControllerDelegat
 
     func setupUI(image: UIImage?) {
         imageView.image = image
+        predictionView.isHidden = image == nil
     }
 
     @IBAction func takePhoto() {
@@ -41,15 +43,31 @@ class RecognizerViewController: UIViewController, UIImagePickerControllerDelegat
 
         present(imagePickerController, animated: true, completion: nil)
     }
+    
     // MARK: UIImagePickerControllerDelegate
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let imageSelected = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.contentMode = .scaleAspectFit
-            setupUI(image: imageSelected)
+
+            if let topPrediction = try? recognize(image: imageSelected) {
+                predictionView.predictionResultLabel.text = topPrediction
+                setupUI(image: imageSelected)
+            }
+
         }
 
         dismiss(animated: true, completion: nil)
+    }
+
+    // TODO: fix error handling
+    func recognize(image: UIImage) throws -> String {
+        if let pixelBufferImage = ImageToPixelBufferConverter.convertToPixelBuffer(image: image) {
+            let prediction = try self.resnet50Model.prediction(image: pixelBufferImage)
+            return prediction.classLabel
+        } else {
+            return "prediction failed"
+        }
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
