@@ -29,10 +29,10 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Got-6P-uzF" userLabel="camera button">
-                                <rect key="frame" x="247.5" y="30" width="30" height="30"/>
+                                <rect key="frame" x="237.5" y="176" width="40" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="Azx-PZ-hxv"/>
-                                    <constraint firstAttribute="height" constant="30" id="XsD-5k-tMP"/>
+                                    <constraint firstAttribute="width" constant="40" id="Azx-PZ-hxv"/>
+                                    <constraint firstAttribute="width" secondItem="Got-6P-uzF" secondAttribute="height" multiplier="25:21" id="vFj-ye-beS"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="camera-icon-grey"/>
                                 <connections>
@@ -151,8 +151,8 @@
                         <constraints>
                             <constraint firstItem="xY8-lj-qzH" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="2PO-9c-cqu"/>
                             <constraint firstItem="hHe-aj-PS5" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="B6f-I0-mC0"/>
-                            <constraint firstItem="Got-6P-uzF" firstAttribute="top" secondItem="hHe-aj-PS5" secondAttribute="top" constant="10" id="VAs-NG-TfZ"/>
                             <constraint firstItem="xY8-lj-qzH" firstAttribute="top" secondItem="zbW-uf-GyQ" secondAttribute="bottom" id="Wft-r9-0Jd"/>
+                            <constraint firstItem="Got-6P-uzF" firstAttribute="bottom" secondItem="hHe-aj-PS5" secondAttribute="bottom" constant="-10" id="XF8-Gw-MAb"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="xY8-lj-qzH" secondAttribute="bottom" id="YF2-LF-kiK"/>
                             <constraint firstItem="Got-6P-uzF" firstAttribute="trailing" secondItem="hHe-aj-PS5" secondAttribute="trailing" constant="-10" id="bpA-NQ-LCK"/>
                             <constraint firstItem="hHe-aj-PS5" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="eFi-GU-y9e"/>
