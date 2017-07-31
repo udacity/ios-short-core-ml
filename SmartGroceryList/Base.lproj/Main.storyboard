@@ -149,6 +149,9 @@
                                             <constraint firstAttribute="height" constant="44" id="YeT-oB-wPD"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="select-photo-icon"/>
+                                        <connections>
+                                            <action selector="leftButtonTappedWithSender:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="K9E-pa-qfF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSW-pJ-Yuh" userLabel="right button">
                                         <rect key="frame" x="64" y="0.0" width="44" height="44"/>
@@ -157,6 +160,9 @@
                                             <constraint firstAttribute="width" constant="44" id="j1n-Bd-wTw"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="use-camera-icon"/>
+                                        <connections>
+                                            <action selector="rightButtonTappedWithSender:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="4rW-Mb-C9n"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

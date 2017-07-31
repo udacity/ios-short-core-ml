@@ -8,16 +8,55 @@
 
 import UIKit
 
-class RecognizerViewController: UIViewController {
+class RecognizerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var predictionResultLabel: UILabel!
     @IBOutlet var leftButton: UIButton!
     @IBOutlet var rightButton: UIButton!
+    let imagePickerController = UIImagePickerController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePickerController.delegate = self
     }
+
+    @IBAction func leftButtonTapped(sender: UIButton) {
+        selectPhoto()
+    }
+
+    @IBAction func rightButtonTapped(sender: UIButton) {
+        takePhoto()
+    }
+
+    func takePhoto() {
+        imagePickerController.allowsEditing = true
+        imagePickerController.sourceType = .camera
+
+        present(imagePickerController, animated: true, completion: nil)
+    }
+
+    func selectPhoto() {
+        imagePickerController.allowsEditing = false
+        imagePickerController.sourceType = .photoLibrary
+
+        present(imagePickerController, animated: true, completion: nil)
+    }
+
+    // MARK: UIImagePickerControllerDelegate
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let imageSelected = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageView.contentMode = .scaleAspectFit
+            imageView.image = imageSelected
+        }
+
+        dismiss(animated: true, completion: nil)
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+
 }
 
