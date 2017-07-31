@@ -221,7 +221,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="cUK-AQ-tVM"/>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="gM2-9f-Z2G"/>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdM-fb-xne" userLabel="add to list button">
