@@ -54,7 +54,6 @@ class RecognizerViewController: UIViewController, UIImagePickerControllerDelegat
                 predictionView.predictionResultLabel.text = topPrediction
                 setupUI(image: imageSelected)
             }
-
         }
 
         dismiss(animated: true, completion: nil)
