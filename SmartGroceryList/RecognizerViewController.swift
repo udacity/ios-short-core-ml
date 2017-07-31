@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecognizerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class RecognizerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource {
 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var leftButton: UIButton!
@@ -16,6 +16,10 @@ class RecognizerViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet var predictionLabel: UILabel!
     @IBOutlet var predictionResultLabel: UILabel!
     @IBOutlet var addToListButton: UIButton!
+    @IBOutlet var tableView: UITableView!
+
+    var groceryItems: [GroceryItem] = []
+    let CellReuseIdentifer = "GroceryItemCell"
 
     let imagePickerController = UIImagePickerController()
 
@@ -24,6 +28,10 @@ class RecognizerViewController: UIViewController, UIImagePickerControllerDelegat
         imagePickerController.delegate = self
 
         setupUI(image: nil)
+
+        setupInitialGroceryListData()
+
+        tableView.reloadData()
     }
 
     func setupUI(image: UIImage?) {
@@ -33,22 +41,14 @@ class RecognizerViewController: UIViewController, UIImagePickerControllerDelegat
         addToListButton.isHidden = image == nil
     }
 
-    @IBAction func leftButtonTapped(sender: UIButton) {
-        selectPhoto()
-    }
-
-    @IBAction func rightButtonTapped(sender: UIButton) {
-        takePhoto()
-    }
-
-    func takePhoto() {
+    @IBAction func takePhoto() {
         imagePickerController.allowsEditing = true
         imagePickerController.sourceType = .camera
 
         present(imagePickerController, animated: true, completion: nil)
     }
 
-    func selectPhoto() {
+    @IBAction func selectPhoto() {
         imagePickerController.allowsEditing = false
         imagePickerController.sourceType = .photoLibrary
 
@@ -70,5 +70,27 @@ class RecognizerViewController: UIViewController, UIImagePickerControllerDelegat
         dismiss(animated: true, completion: nil)
     }
 
+    // MARK: UITableViewDataSource
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return groceryItems.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let groceryItemCell = tableView.dequeueReusableCell(withIdentifier: CellReuseIdentifer) as! GroceryItemTableViewCell
+        if indexPath.row < groceryItems.count {
+            let item = groceryItems[indexPath.row]
+            groceryItemCell.nameLabel.text = item.name
+            groceryItemCell.quantityLabel.text = item.quantity
+        }
+
+        return groceryItemCell
+    }
+
+    // MARK: private
+
+    private func setupInitialGroceryListData() {
+        groceryItems = [GroceryItem(name: "pineapple", quantity: "1")]
+    }
 }
 
