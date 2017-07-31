@@ -15,6 +15,7 @@
 		022132361F2BCA040077DE41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022132341F2BCA040077DE41 /* LaunchScreen.storyboard */; };
 		0221323E1F2BD5930077DE41 /* GroceryItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0221323D1F2BD5930077DE41 /* GroceryItemTableViewCell.swift */; };
 		022132401F2BDFFE0077DE41 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0221323F1F2BDFFE0077DE41 /* GroceryItem.swift */; };
+		026D1B901F2EB3A7008588FB /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 026D1B8F1F2EB3A7008588FB /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		022132371F2BCA040077DE41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0221323D1F2BD5930077DE41 /* GroceryItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemTableViewCell.swift; sourceTree = "<group>"; };
 		0221323F1F2BDFFE0077DE41 /* GroceryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
+		026D1B8F1F2EB3A7008588FB /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		022132281F2BCA040077DE41 /* SmartGroceryList */ = {
 			isa = PBXGroup;
 			children = (
+				026D1B8F1F2EB3A7008588FB /* Resnet50.mlmodel */,
 				022132291F2BCA040077DE41 /* AppDelegate.swift */,
 				0221322B1F2BCA040077DE41 /* ListViewController.swift */,
 				0221322D1F2BCA040077DE41 /* RecognizerViewController.swift */,
@@ -148,6 +151,7 @@
 				0221322A1F2BCA040077DE41 /* AppDelegate.swift in Sources */,
 				0221323E1F2BD5930077DE41 /* GroceryItemTableViewCell.swift in Sources */,
 				022132401F2BDFFE0077DE41 /* GroceryItem.swift in Sources */,
+				026D1B901F2EB3A7008588FB /* Resnet50.mlmodel in Sources */,
 				0221322C1F2BCA040077DE41 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +328,7 @@
 				0221323C1F2BCA040077DE41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
