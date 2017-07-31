@@ -8,6 +8,11 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--List-->
         <scene sceneID="hNz-n2-bh7">
@@ -113,7 +118,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59c-hh-KjX" userLabel="Prediction Label">
-                                <rect key="frame" x="15" y="415" width="100" height="26"/>
+                                <rect key="frame" x="15" y="474" width="100" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Odt-Sj-sr3"/>
                                 </constraints>
@@ -128,19 +133,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAx-6Y-wcQ" userLabel="Result Label">
-                                <rect key="frame" x="135" y="415" width="225" height="26"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Label">
-                                        <attributes>
-                                            <font key="NSFont" size="22" name="HelveticaNeue-Thin"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <rect key="frame" x="135" y="474" width="225" height="26"/>
+                                <attributedString key="attributedText"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFq-0u-wxI" userLabel="Button container view">
-                                <rect key="frame" x="133.5" y="461" width="108" height="44"/>
+                                <rect key="frame" x="133.5" y="410" width="108" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Md3-iJ-Qb5" userLabel="left button">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
@@ -175,28 +173,43 @@
                                     <constraint firstItem="WSW-pJ-Yuh" firstAttribute="top" secondItem="JFq-0u-wxI" secondAttribute="top" id="lGO-HI-Sr8"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdM-fb-xne">
+                                <rect key="frame" x="127.5" y="522" width="120" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Vh2-vi-hB2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Add to list">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="iAx-6Y-wcQ" secondAttribute="trailing" constant="15" id="2hQ-FG-8No"/>
                             <constraint firstItem="iAx-6Y-wcQ" firstAttribute="height" secondItem="59c-hh-KjX" secondAttribute="height" id="98G-oJ-irT"/>
+                            <constraint firstItem="59c-hh-KjX" firstAttribute="top" secondItem="JFq-0u-wxI" secondAttribute="bottom" constant="20" id="Bhb-Fh-8Gu"/>
                             <constraint firstItem="hHe-aj-PS5" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="Ddl-hh-GNw"/>
                             <constraint firstItem="iAx-6Y-wcQ" firstAttribute="centerY" secondItem="59c-hh-KjX" secondAttribute="centerY" id="Dzb-k7-TRg"/>
                             <constraint firstAttribute="trailing" secondItem="hHe-aj-PS5" secondAttribute="trailing" id="Pa0-iv-2UA"/>
                             <constraint firstItem="hHe-aj-PS5" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="SJ0-LX-CPx"/>
                             <constraint firstItem="JFq-0u-wxI" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Xmh-sX-6ix"/>
-                            <constraint firstItem="59c-hh-KjX" firstAttribute="top" secondItem="hHe-aj-PS5" secondAttribute="bottom" constant="20" id="m75-Ww-Qrr"/>
-                            <constraint firstItem="JFq-0u-wxI" firstAttribute="top" secondItem="59c-hh-KjX" secondAttribute="bottom" constant="20" id="qZR-l1-iv5"/>
+                            <constraint firstItem="kdM-fb-xne" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Yv7-JA-FOh"/>
+                            <constraint firstItem="JFq-0u-wxI" firstAttribute="top" secondItem="hHe-aj-PS5" secondAttribute="bottom" constant="15" id="oOk-I2-ydr"/>
                             <constraint firstItem="iAx-6Y-wcQ" firstAttribute="leading" secondItem="59c-hh-KjX" secondAttribute="trailing" constant="20" id="qmN-wx-qd7"/>
+                            <constraint firstItem="kdM-fb-xne" firstAttribute="top" secondItem="59c-hh-KjX" secondAttribute="bottom" constant="22" id="uEV-y2-KSL"/>
                             <constraint firstItem="59c-hh-KjX" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="15" id="unp-qK-Qtu"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="camera-icon" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="addToListButton" destination="kdM-fb-xne" id="tHN-DE-qS2"/>
                         <outlet property="imageView" destination="hHe-aj-PS5" id="qvE-0u-98n"/>
-                        <outlet property="leftButton" destination="Md3-iJ-Qb5" id="GlZ-DN-r3d"/>
-                        <outlet property="predictionResultLabel" destination="iAx-6Y-wcQ" id="vJ7-Zq-JLl"/>
-                        <outlet property="rightButton" destination="WSW-pJ-Yuh" id="Lmd-la-cey"/>
+                        <outlet property="leftButton" destination="Md3-iJ-Qb5" id="Y9G-Dg-370"/>
+                        <outlet property="predictionLabel" destination="59c-hh-KjX" id="KGc-Er-OQ9"/>
+                        <outlet property="predictionResultLabel" destination="iAx-6Y-wcQ" id="sso-pM-7vP"/>
+                        <outlet property="rightButton" destination="WSW-pJ-Yuh" id="zfQ-aX-D62"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
