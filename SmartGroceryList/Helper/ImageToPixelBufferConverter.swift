@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// MARK: - ImageToPixelBufferConverter
+
 class ImageToPixelBufferConverter {
 
     static func convertToPixelBuffer(image: UIImage) -> CVPixelBuffer? {

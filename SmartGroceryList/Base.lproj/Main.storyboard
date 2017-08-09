@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8rJ-Kc-sve">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8rJ-Kc-sve">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,7 +36,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Got-6P-uzF" userLabel="camera button">
                                 <rect key="frame" x="167.5" y="200" width="40" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="Azx-PZ-hxv"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="40" id="Azx-PZ-hxv"/>
                                     <constraint firstAttribute="width" secondItem="Got-6P-uzF" secondAttribute="height" multiplier="25:21" id="vFj-ye-beS"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="camera-icon-grey"/>
@@ -167,7 +167,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sA7-lM-f8l" userLabel="name">
-                                                    <rect key="frame" x="15" y="5" width="42.5" height="34"/>
+                                                    <rect key="frame" x="15" y="5" width="355" height="34"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="name">
                                                             <attributes>
@@ -182,6 +182,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="sA7-lM-f8l" secondAttribute="bottom" constant="5" id="G3V-hG-Htw"/>
                                                 <constraint firstItem="sA7-lM-f8l" firstAttribute="leading" secondItem="BD3-5k-FPD" secondAttribute="leading" constant="15" id="Sp8-8m-8Mr"/>
+                                                <constraint firstAttribute="trailing" secondItem="sA7-lM-f8l" secondAttribute="trailing" constant="5" id="VFS-JB-58s"/>
                                                 <constraint firstItem="sA7-lM-f8l" firstAttribute="top" secondItem="BD3-5k-FPD" secondAttribute="top" constant="5" id="kiy-Wd-Yb3"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -213,7 +214,7 @@
                             <constraint firstItem="zbW-uf-GyQ" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="15" id="zx3-G4-5KV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="camera-icon" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="" image="camera-icon-grey" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="cameraButton" destination="Got-6P-uzF" id="IC2-Ek-jme"/>
                         <outlet property="imageView" destination="hHe-aj-PS5" id="qvE-0u-98n"/>
@@ -228,7 +229,6 @@
     </scenes>
     <resources>
         <image name="add-to-list" width="28" height="28"/>
-        <image name="camera-icon" width="25" height="20"/>
         <image name="camera-icon-grey" width="50" height="42"/>
         <image name="list" width="25" height="25"/>
         <image name="reject-prediction" width="28" height="28"/>
