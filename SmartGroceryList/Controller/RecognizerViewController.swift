@@ -24,7 +24,7 @@ class RecognizerViewController: UIViewController {
     
     let CellReuseIdentifer = "GroceryItemCell"
     let imagePickerController = UIImagePickerController()
-    let resnet50Model = Resnet50()
+    let mobileNet = MobileNet()
     var groceryItems: [String] = []
     var currentPrediction: String?
 
@@ -40,9 +40,12 @@ class RecognizerViewController: UIViewController {
     // MARK: Actions
     
     @IBAction func takePhoto() {
-        imagePickerController.sourceType = .camera
-        present(imagePickerController, animated: true, completion: nil)
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePickerController.sourceType = .camera
+            present(imagePickerController, animated: true, completion: nil)
+        } else {
+            showCameraNotAvailableAlert()
+        }
     }
     
     @IBAction func selectPhoto() {
@@ -83,7 +86,7 @@ class RecognizerViewController: UIViewController {
 
     private func recognize(image: UIImage) -> String? {
         if let pixelBufferImage = ImageToPixelBufferConverter.convertToPixelBuffer(image: image) {
-            if let prediction = try? self.resnet50Model.prediction(image: pixelBufferImage) {
+            if let prediction = try? self.mobileNet.prediction(image: pixelBufferImage) {
                 return prediction.classLabel
             }
         }

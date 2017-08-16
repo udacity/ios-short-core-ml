@@ -15,7 +15,7 @@
 		0221323E1F2BD5930077DE41 /* GroceryItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0221323D1F2BD5930077DE41 /* GroceryItemTableViewCell.swift */; };
 		026D1B981F2F36E8008588FB /* PredictionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D1B971F2F36E8008588FB /* PredictionView.swift */; };
 		026D1B9C1F2F3F38008588FB /* ImageToPixelBufferConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D1B9B1F2F3F38008588FB /* ImageToPixelBufferConverter.swift */; };
-		A99B1C281F3271AE00DD4197 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A99B1C271F32719300DD4197 /* Resnet50.mlmodel */; };
+		357C38121F447F26002D1B5E /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 357C38111F447F08002D1B5E /* MobileNet.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		0221323D1F2BD5930077DE41 /* GroceryItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemTableViewCell.swift; sourceTree = "<group>"; };
 		026D1B971F2F36E8008588FB /* PredictionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionView.swift; sourceTree = "<group>"; };
 		026D1B9B1F2F3F38008588FB /* ImageToPixelBufferConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageToPixelBufferConverter.swift; sourceTree = "<group>"; };
-		A99B1C271F32719300DD4197 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
+		357C38111F447F08002D1B5E /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MobileNet.mlmodel; path = ../../../Downloads/MobileNet.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 				A947C0601F327452004E2EA5 /* Controller */,
 				026D1BBE1F2FB554008588FB /* View */,
 				026D1BBF1F2FB563008588FB /* Helper */,
-				A99B1C271F32719300DD4197 /* Resnet50.mlmodel */,
+				357C38111F447F08002D1B5E /* MobileNet.mlmodel */,
 				0221322F1F2BCA040077DE41 /* Main.storyboard */,
 				022132341F2BCA040077DE41 /* LaunchScreen.storyboard */,
 				022132371F2BCA040077DE41 /* Info.plist */,
@@ -175,7 +175,7 @@
 				026D1B9C1F2F3F38008588FB /* ImageToPixelBufferConverter.swift in Sources */,
 				0221322A1F2BCA040077DE41 /* AppDelegate.swift in Sources */,
 				0221323E1F2BD5930077DE41 /* GroceryItemTableViewCell.swift in Sources */,
-				A99B1C281F3271AE00DD4197 /* Resnet50.mlmodel in Sources */,
+				357C38121F447F26002D1B5E /* MobileNet.mlmodel in Sources */,
 				026D1B981F2F36E8008588FB /* PredictionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
