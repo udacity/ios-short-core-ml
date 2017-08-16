@@ -40,7 +40,6 @@ class RecognizerViewController: UIViewController {
     // MARK: Actions
     
     @IBAction func takePhoto() {
-        imagePickerController.allowsEditing = true
         imagePickerController.sourceType = .camera
 
         present(imagePickerController, animated: true, completion: nil)
