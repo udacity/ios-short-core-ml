@@ -89,7 +89,7 @@ class RecognizerViewController: UIViewController {
         return nil
     }
     
-    private func handleRecognitionFailure() {
+    private func showRecognitionFailureAlert() {
         let alertController = UIAlertController.init(title: "Recognition Failure", message: "Please try another image.", preferredStyle: .alert)
         alertController.addAction(UIAlertAction.init(title: "OK", style: .default, handler: nil))
         present(alertController, animated: true, completion: nil)
@@ -126,7 +126,7 @@ extension RecognizerViewController: UIImagePickerControllerDelegate, UINavigatio
             if let topPrediction = recognize(image: imageSelected) {
                 setupPrediction(prediction: topPrediction, image: imageSelected)
             } else {
-                handleRecognitionFailure()
+                showRecognitionFailureAlert()
             }
         }
         
