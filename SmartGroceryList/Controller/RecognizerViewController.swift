@@ -42,6 +42,7 @@ class RecognizerViewController: UIViewController {
     @IBAction func takePhoto() {
         imagePickerController.sourceType = .camera
         present(imagePickerController, animated: true, completion: nil)
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
     }
     
     @IBAction func selectPhoto() {
@@ -91,6 +92,12 @@ class RecognizerViewController: UIViewController {
     
     private func showRecognitionFailureAlert() {
         let alertController = UIAlertController.init(title: "Recognition Failure", message: "Please try another image.", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction.init(title: "OK", style: .default, handler: nil))
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    private func showCameraNotAvailableAlert() {
+        let alertController = UIAlertController.init(title: "Camera Not Available", message: nil, preferredStyle: .alert)
         alertController.addAction(UIAlertAction.init(title: "OK", style: .default, handler: nil))
         present(alertController, animated: true, completion: nil)
     }
