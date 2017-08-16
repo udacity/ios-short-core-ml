@@ -17,6 +17,7 @@ class RecognizerViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var cameraButton: UIButton!
     @IBOutlet var predictionView: PredictionView!
+    @IBOutlet var photoSourceView: UIView!
     @IBOutlet var tableView: UITableView!
 
     // MARK: Properties
@@ -55,6 +56,7 @@ class RecognizerViewController: UIViewController {
         if let predictionToAdd = currentPrediction {
             groceryItems.append(predictionToAdd)
             tableView.reloadData()
+            clearPrediction()
         }
     }
 
@@ -67,6 +69,7 @@ class RecognizerViewController: UIViewController {
     private func setupPrediction(prediction: String, image: UIImage) {
         predictionView.predictionResultLabel.text = prediction
         predictionView.isHidden = false
+        photoSourceView.isHidden = true
         imageView.image = image
         
         currentPrediction = prediction
@@ -74,6 +77,7 @@ class RecognizerViewController: UIViewController {
 
     private func clearPrediction() {
         predictionView.isHidden = true
+        photoSourceView.isHidden = false
         predictionView.predictionResultLabel.text = nil
         imageView.image = nil
 

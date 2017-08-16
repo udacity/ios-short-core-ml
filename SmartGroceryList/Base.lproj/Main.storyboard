@@ -255,6 +255,7 @@
                     <connections>
                         <outlet property="cameraButton" destination="Got-6P-uzF" id="IC2-Ek-jme"/>
                         <outlet property="imageView" destination="hHe-aj-PS5" id="qvE-0u-98n"/>
+                        <outlet property="photoSourceView" destination="nRk-OB-VkO" id="rbl-dG-CX2"/>
                         <outlet property="predictionView" destination="zbW-uf-GyQ" id="Pwv-Ia-VCE"/>
                         <outlet property="tableView" destination="xY8-lj-qzH" id="Qdn-4M-r37"/>
                     </connections>
