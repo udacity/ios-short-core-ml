@@ -83,13 +83,19 @@ class RecognizerViewController: UIViewController {
         currentPrediction = nil
     }
 
-    private func recognize(image: UIImage) throws -> String {
+    private func recognize(image: UIImage) -> String? {
         if let pixelBufferImage = ImageToPixelBufferConverter.convertToPixelBuffer(image: image) {
-            let prediction = try self.resnet50Model.prediction(image: pixelBufferImage)
-            return prediction.classLabel
-        } else {
-            return "prediction failed"
+            if let prediction = try? self.resnet50Model.prediction(image: pixelBufferImage) {
+                return prediction.classLabel
+            }
         }
+        return nil
+    }
+    
+    private func handleRecognitionFailure() {
+        let alertController = UIAlertController.init(title: "Recognition Failure", message: "Please try another image.", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction.init(title: "OK", style: .default, handler: nil))
+        present(alertController, animated: true, completion: nil)
     }
 }
 
@@ -120,8 +126,10 @@ extension RecognizerViewController: UIImagePickerControllerDelegate, UINavigatio
         if let imageSelected = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.contentMode = .scaleAspectFit
             
-            if let topPrediction = try? recognize(image: imageSelected) {
+            if let topPrediction = recognize(image: imageSelected) {
                 setupPrediction(prediction: topPrediction, image: imageSelected)
+            } else {
+                handleRecognitionFailure()
             }
         }
         
