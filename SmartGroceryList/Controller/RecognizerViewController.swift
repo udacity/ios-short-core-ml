@@ -41,13 +41,11 @@ class RecognizerViewController: UIViewController {
     
     @IBAction func takePhoto() {
         imagePickerController.sourceType = .camera
-
         present(imagePickerController, animated: true, completion: nil)
     }
     
     @IBAction func selectPhoto() {
         imagePickerController.sourceType = .photoLibrary
-        
         present(imagePickerController, animated: true, completion: nil)
     }
 
@@ -70,7 +68,7 @@ class RecognizerViewController: UIViewController {
         predictionView.isHidden = false
         photoSourceView.isHidden = true
         imageView.image = image
-        
+
         currentPrediction = prediction
     }
 
@@ -79,7 +77,6 @@ class RecognizerViewController: UIViewController {
         photoSourceView.isHidden = false
         predictionView.predictionResultLabel.text = nil
         imageView.image = nil
-
         currentPrediction = nil
     }
 
