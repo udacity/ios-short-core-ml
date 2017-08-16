@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8rJ-Kc-sve">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8rJ-Kc-sve">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,17 +33,6 @@
                                     <constraint firstAttribute="height" constant="224" id="NgT-Qk-zLt"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Got-6P-uzF" userLabel="camera button">
-                                <rect key="frame" x="167.5" y="200" width="40" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="40" id="Azx-PZ-hxv"/>
-                                    <constraint firstAttribute="width" secondItem="Got-6P-uzF" secondAttribute="height" multiplier="25:21" id="vFj-ye-beS"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="camera-icon-grey"/>
-                                <connections>
-                                    <action selector="takePhoto" destination="8rJ-Kc-sve" eventType="touchUpInside" id="j7h-dh-Bal"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbW-uf-GyQ" userLabel="prediction view" customClass="PredictionView" customModule="SmartGroceryList" customModuleProvider="target">
                                 <rect key="frame" x="15" y="249" width="350" height="70"/>
                                 <subviews>
@@ -120,6 +109,49 @@
                                     <outlet property="predictionResultLabel" destination="iAx-6Y-wcQ" id="eQu-Uy-ZaW"/>
                                     <outlet property="rejectPredictionButton" destination="IS3-t0-x4R" id="4IV-9D-Ah6"/>
                                 </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRk-OB-VkO" userLabel="photo source view">
+                                <rect key="frame" x="15" y="249" width="350" height="70"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbh-9A-fJr" userLabel="button container">
+                                        <rect key="frame" x="117.5" y="14" width="115" height="42"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VrN-lT-Elz" userLabel="camera roll button">
+                                                <rect key="frame" x="0.0" y="-1" width="50" height="42.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="Yve-LN-ix3"/>
+                                                    <constraint firstAttribute="width" secondItem="VrN-lT-Elz" secondAttribute="height" multiplier="25:21" id="vCL-Rn-4aP"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="camera-roll-icon-grey"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Got-6P-uzF" userLabel="camera button">
+                                                <rect key="frame" x="65" y="-1" width="50" height="42.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="Azx-PZ-hxv"/>
+                                                    <constraint firstAttribute="width" secondItem="Got-6P-uzF" secondAttribute="height" multiplier="25:21" id="vFj-ye-beS"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="camera-icon-grey"/>
+                                                <connections>
+                                                    <action selector="takePhoto" destination="8rJ-Kc-sve" eventType="touchUpInside" id="j7h-dh-Bal"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Got-6P-uzF" secondAttribute="trailing" id="8Pc-KS-Fr0"/>
+                                            <constraint firstItem="VrN-lT-Elz" firstAttribute="leading" secondItem="cbh-9A-fJr" secondAttribute="leading" id="VxI-aQ-3Ob"/>
+                                            <constraint firstAttribute="height" constant="42" id="WXw-HM-3Uj"/>
+                                            <constraint firstItem="Got-6P-uzF" firstAttribute="centerY" secondItem="cbh-9A-fJr" secondAttribute="centerY" id="Yhd-2L-LfN"/>
+                                            <constraint firstAttribute="width" constant="115" id="ewv-AF-UCB"/>
+                                            <constraint firstItem="Got-6P-uzF" firstAttribute="leading" secondItem="VrN-lT-Elz" secondAttribute="trailing" constant="15" id="fCO-3z-kAb"/>
+                                            <constraint firstItem="VrN-lT-Elz" firstAttribute="centerY" secondItem="cbh-9A-fJr" secondAttribute="centerY" id="yQK-Ui-fnc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cbh-9A-fJr" firstAttribute="centerY" secondItem="nRk-OB-VkO" secondAttribute="centerY" id="AsZ-dj-FWf"/>
+                                    <constraint firstItem="cbh-9A-fJr" firstAttribute="centerX" secondItem="nRk-OB-VkO" secondAttribute="centerX" id="fa8-A7-e44"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bql-hF-Ggr" userLabel="separator">
                                 <rect key="frame" x="0.0" y="319" width="375" height="1"/>
@@ -199,18 +231,20 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xY8-lj-qzH" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="2PO-9c-cqu"/>
+                            <constraint firstItem="nRk-OB-VkO" firstAttribute="trailing" secondItem="zbW-uf-GyQ" secondAttribute="trailing" id="8Cg-mY-8sE"/>
                             <constraint firstItem="hHe-aj-PS5" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="B6f-I0-mC0"/>
                             <constraint firstItem="Bql-hF-Ggr" firstAttribute="top" secondItem="zbW-uf-GyQ" secondAttribute="bottom" id="MrK-YL-yKn"/>
+                            <constraint firstItem="nRk-OB-VkO" firstAttribute="leading" secondItem="zbW-uf-GyQ" secondAttribute="leading" id="Qpn-53-SQX"/>
                             <constraint firstItem="Bql-hF-Ggr" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="SaE-wR-UBB"/>
-                            <constraint firstItem="Got-6P-uzF" firstAttribute="bottom" secondItem="hHe-aj-PS5" secondAttribute="bottom" constant="-10" id="XF8-Gw-MAb"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="xY8-lj-qzH" secondAttribute="bottom" id="YF2-LF-kiK"/>
                             <constraint firstItem="hHe-aj-PS5" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="eFi-GU-y9e"/>
                             <constraint firstAttribute="trailing" secondItem="zbW-uf-GyQ" secondAttribute="trailing" constant="10" id="enG-re-syv"/>
                             <constraint firstItem="xY8-lj-qzH" firstAttribute="top" secondItem="Bql-hF-Ggr" secondAttribute="bottom" id="fPM-ep-EdC"/>
                             <constraint firstAttribute="trailing" secondItem="xY8-lj-qzH" secondAttribute="trailing" id="fsh-wl-HfP"/>
+                            <constraint firstItem="nRk-OB-VkO" firstAttribute="bottom" secondItem="zbW-uf-GyQ" secondAttribute="bottom" id="iQ3-rT-Id9"/>
                             <constraint firstAttribute="trailing" secondItem="Bql-hF-Ggr" secondAttribute="trailing" id="qW1-Pv-GCB"/>
+                            <constraint firstItem="nRk-OB-VkO" firstAttribute="top" secondItem="zbW-uf-GyQ" secondAttribute="top" id="r6r-S4-ELr"/>
                             <constraint firstItem="zbW-uf-GyQ" firstAttribute="top" secondItem="hHe-aj-PS5" secondAttribute="bottom" constant="5" id="t0X-cd-tg0"/>
-                            <constraint firstItem="Got-6P-uzF" firstAttribute="centerX" secondItem="hHe-aj-PS5" secondAttribute="centerX" id="xhU-7A-Rrc"/>
                             <constraint firstItem="zbW-uf-GyQ" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="15" id="zx3-G4-5KV"/>
                         </constraints>
                     </view>
@@ -230,6 +264,7 @@
     <resources>
         <image name="add-to-list" width="28" height="28"/>
         <image name="camera-icon-grey" width="50" height="42"/>
+        <image name="camera-roll-icon-grey" width="50" height="42"/>
         <image name="list" width="25" height="25"/>
         <image name="reject-prediction" width="28" height="28"/>
     </resources>
