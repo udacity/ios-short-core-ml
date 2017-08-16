@@ -123,6 +123,9 @@
                                                     <constraint firstAttribute="width" secondItem="VrN-lT-Elz" secondAttribute="height" multiplier="25:21" id="vCL-Rn-4aP"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="camera-roll-icon-grey"/>
+                                                <connections>
+                                                    <action selector="selectPhoto" destination="8rJ-Kc-sve" eventType="touchUpInside" id="8rm-n0-rUL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Got-6P-uzF" userLabel="camera button">
                                                 <rect key="frame" x="65" y="-1" width="50" height="42.5"/>

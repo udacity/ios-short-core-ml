@@ -44,6 +44,12 @@ class RecognizerViewController: UIViewController {
 
         present(imagePickerController, animated: true, completion: nil)
     }
+    
+    @IBAction func selectPhoto() {
+        imagePickerController.sourceType = .photoLibrary
+        
+        present(imagePickerController, animated: true, completion: nil)
+    }
 
     @IBAction func addToList() {
         if let predictionToAdd = currentPrediction {
