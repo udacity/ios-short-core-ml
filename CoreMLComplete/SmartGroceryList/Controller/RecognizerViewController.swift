@@ -24,9 +24,9 @@ class RecognizerViewController: UIViewController {
     
     let CellReuseIdentifer = "GroceryItemCell"
     let imagePickerController = UIImagePickerController()
-    let mobileNet = MobileNet()
     var groceryItems: [String] = []
     var currentPrediction: String?
+    let mobileNet = MobileNet()
 
     // MARK: Life Cycle
     
