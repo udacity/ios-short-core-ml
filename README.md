@@ -3,5 +3,10 @@ iOS image classification app using Core ML and MobileNet
 
 ## Convert-food101-model
 
-1. Download [food101-model.hdf5](https://d17h27t6h515a5.cloudfront.net/topher/2017/September/59ca5da1_food101-model/food101-model.hdf5) weights for pre-trained Keras model
-2. Follow instructions in `Setting Up Python Environment` screencast
+Converting the Food 101 custom machine learning model to .mlmodel format utilizes several Python tools that have been  packaged into a Docker image. To run the docker image:
+
+1. `cd Convert-food101-model`
+2. `docker build -t convert-coreml .`
+3. `docker run --rm -it -p 8888:8888 -v "$(pwd)/notebook:/workspace/" convert-coreml`
+
+If you don't have Docker installed, you can find instructions on installing [here](https://docs.docker.com/docker-for-mac/install/)
