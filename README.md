@@ -8,8 +8,8 @@ Converting the Food 101 custom machine learning model to .mlmodel format utilize
 
 ```bash
 $ cd Convert-food101-model
-$ docker build -t convert-coreml .`
-$ docker run --rm -it -p 8888:8888 -v "$(pwd)/notebook:/workspace/notebook" convert-coreml`
+$ docker build -t convert-coreml .
+$ docker run --rm -it -p 8888:8888 -v "$(pwd)/notebook:/workspace/notebook" convert-coreml
 ```
 
 If you don't have Docker installed, you can find instructions on installing [here](https://docs.docker.com/docker-for-mac/install/).
