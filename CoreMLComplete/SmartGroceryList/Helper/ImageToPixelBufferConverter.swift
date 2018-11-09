@@ -42,7 +42,9 @@ class ImageToPixelBufferConverter {
             return nil
         }
 
-        CVPixelBufferLockBaseAddress(createdPixelBuffer, CVPixelBufferLockFlags(rawValue: 0))
+        let lockFlags = CVPixelBufferLockFlags(rawValue: 0)
+        CVPixelBufferLockBaseAddress(createdPixelBuffer, lockFlags)
+        defer { CVPixelBufferUnlockBaseAddress(createdPixelBuffer, lockFlags) }
         let pixelData = CVPixelBufferGetBaseAddress(createdPixelBuffer)
 
         let colorSpace = CGColorSpaceCreateDeviceRGB()
@@ -62,7 +64,6 @@ class ImageToPixelBufferConverter {
         UIGraphicsPushContext(context)
         resizedImage.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
         UIGraphicsPopContext()
-        CVPixelBufferUnlockBaseAddress(createdPixelBuffer, CVPixelBufferLockFlags(rawValue: 0))
 
         return createdPixelBuffer
     }
