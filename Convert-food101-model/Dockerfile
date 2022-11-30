@@ -1,4 +1,5 @@
-FROM ubuntu
+FROM ubuntu:18.04
+ARG DEBIAN_FRONTEND=noninteractive
 
 COPY requirements.txt /requirements.txt
 
@@ -9,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     python-pip \
     python-dev \
     ipython \
-    ipython-notebook 
+    jupyter-notebook 
 
 # Install python requirements
 RUN pip install --upgrade pip
@@ -23,4 +24,4 @@ RUN mv food101-model.hdf5 /workspace/
 EXPOSE 8888
 
 # Launch Jupyter notebook
-CMD ["jupyter-notebook","--allow-root", "--ip=0.0.0.0", "--notebook-dir=/workspace"]
+CMD ["jupyter-notebook", "--allow-root", "--ip=0.0.0.0", "--notebook-dir=/workspace"]
